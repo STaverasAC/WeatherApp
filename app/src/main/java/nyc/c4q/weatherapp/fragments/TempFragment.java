@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,15 +14,14 @@ import nyc.c4q.weatherapp.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class TempFragment extends Fragment {
 
     View rootView;
+    ImageView img;
+    TextView temp;
 
 
-
-
-
-    public MainFragment() {
+    public TempFragment() {
         // Required empty public constructor
     }
 
@@ -31,9 +29,9 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_main, container, false);
-
-
+        rootView = inflater.inflate(R.layout.fragment_temp, container, false);
+        img = (ImageView)rootView.findViewById(R.id.img_temp);
+        temp = (TextView) rootView.findViewById(R.id.text_temp);
         return rootView;
     }
 
